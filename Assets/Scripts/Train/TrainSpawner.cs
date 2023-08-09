@@ -9,11 +9,12 @@ public class TrainSpawner : MonoBehaviour
 
     private GameObject spawnedTrain;
 
-    [SerializeField]
-    private Transform leftPos, midPos, rightPos;
-
     private int randomIndex;
-    private int randomSide;
+
+    private int randomNumber;
+
+    public static int score = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,26 +24,22 @@ public class TrainSpawner : MonoBehaviour
     // Update is called once per frame
     IEnumerator SpawnTrains(){
         while(true){
-            yield return new WaitForSeconds(Random.Range(1,5));
-        
+            
+            yield return new WaitForSeconds(Random.Range(2,5));
+         
             randomIndex  = Random.Range(0,trainReference.Length);
-            randomSide = Random.Range(0,3);
 
+            randomNumber = Random.Range(1,4);
+            
             spawnedTrain = Instantiate(trainReference[randomIndex]);
-
-            if (randomSide==0){
-                spawnedTrain.transform.position = leftPos.position;  
-                spawnedTrain.GetComponent<TrainMovment>().speed = Random.Range(1,9); 
+            if (randomIndex == 0){
+            spawnedTrain.GetComponent<follower_L>().speed = randomNumber;
             }
-            else if (randomSide==1){
-                spawnedTrain.transform.position = midPos.position; 
-                spawnedTrain.GetComponent<TrainMovment>().speed = Random.Range(1,9);
+            else if (randomIndex == 1){
+                spawnedTrain.GetComponent<follower_R>().speed = randomNumber;
             }
-            else{
-                spawnedTrain.transform.position = rightPos.position;
-                spawnedTrain.GetComponent<TrainMovment>().speed = Random.Range(1,9);
- 
-            }
+            
+            
         }
 
     }
