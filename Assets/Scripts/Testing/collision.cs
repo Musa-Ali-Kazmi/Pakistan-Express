@@ -10,8 +10,8 @@ public class collision : MonoBehaviour
     {
         // Check if the collision involves the tag "Obstacle" (you can change it to any tag you want)
         if (collision.gameObject.CompareTag(train_tag))
-        {
-            Debug.Log("Collision Detected with dthdtdth");
+        {           
+            Destroy(gameObject); // Destroy the object
         }
     }
    

@@ -12,7 +12,7 @@ public class follower_L : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -35,6 +35,5 @@ public class follower_L : MonoBehaviour
             Destroy(gameObject); // Destroy the object
         }
     }
-
-    
+ 
 }
