@@ -9,10 +9,11 @@ public class follower_R : MonoBehaviour
     [HideInInspector]
     public float speed = 5;
     float distanceTravelled;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        string tag = gameObject.tag;
     }
 
     // Update is called once per frame
@@ -30,9 +31,16 @@ public class follower_R : MonoBehaviour
         //Destruction
         if (transform.position.y > 5)
         {   
+            if(tag == "Train_R"){
             TrainSpawner.score++;
-            
+            Debug.Log("SAFE");
             Destroy(gameObject); // Destroy the object
+            }
+            else if(tag == "TNT_R"){
+            TrainSpawner.collisions--;
+            Debug.Log("Destruction");
+            Destroy(gameObject); // Destroy the object
+            }
         }
-        }
+    }
 }

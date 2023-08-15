@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Train
+  - Train_R
+  - Train_L
+  - TNT_L
+  - TNT_R
   layers:
   - Default
   - TransparentFX

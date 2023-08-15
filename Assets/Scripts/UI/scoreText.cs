@@ -7,6 +7,7 @@ public class scoreText : MonoBehaviour
 {
     
     public Text text;
+    public Text text2;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,6 @@ public class scoreText : MonoBehaviour
     void Update()
     {
         text.text = ""+TrainSpawner.score;
+        text2.text = ""+TrainSpawner.collisions;// Collions counter
     }
 }
