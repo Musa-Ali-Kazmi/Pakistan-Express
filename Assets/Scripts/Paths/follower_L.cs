@@ -33,12 +33,10 @@ public class follower_L : MonoBehaviour
         {   
             if(tag == "Train_L"){
             TrainSpawner.score++;
-            Debug.Log("SAFE");
             Destroy(gameObject); // Destroy the object
             }
             else if(tag == "TNT_L"){
             TrainSpawner.collisions--;
-            Debug.Log("Destruction");
             Destroy(gameObject); // Destroy the object
             }
         }

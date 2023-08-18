@@ -8,6 +8,8 @@ TagManager:
   - Train_L
   - TNT_L
   - TNT_R
+  - Train_RR
+  - TNT_RR
   layers:
   - Default
   - TransparentFX

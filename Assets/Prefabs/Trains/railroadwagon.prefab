@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4298970319420984555}
   - component: {fileID: 4298970319420984548}
   - component: {fileID: 4298970319420984549}
+  - component: {fileID: -1469391176050961195}
+  - component: {fileID: -6181338799776957332}
+  - component: {fileID: -210418936921735836}
+  - component: {fileID: 5095696787583734661}
   m_Layer: 0
   m_Name: railroadwagon
   m_TagString: Train_L
@@ -26,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4298970319420984550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.31, y: 6.07, z: 0}
+  m_LocalPosition: {x: 30, y: 30, z: 0}
   m_LocalScale: {x: 1.91, y: 1.61, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,3 +103,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 756871808772280761, guid: bdcb290e2e58a8f478044e7c7ebdba5b, type: 3}
   speed: 1
+--- !u!114 &-1469391176050961195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298970319420984550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614be55f411c82f4dac108ba9c31cf32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSpeed: 0.2
+  maxTouchDistance: 10
+--- !u!114 &-6181338799776957332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298970319420984550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4475b1bb9f3e040872d8db2146f7ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &-210418936921735836
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298970319420984550}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0026127547, y: 0.010333084}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.16}
+    newSize: {x: 0.31, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27341744, y: 0.11040114}
+  m_EdgeRadius: 0
+--- !u!50 &5095696787583734661
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4298970319420984550}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

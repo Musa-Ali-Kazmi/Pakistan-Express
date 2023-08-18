@@ -15,7 +15,7 @@ public class TrainSpawner : MonoBehaviour
 
     public static int score = 0;
 
-    public static float collisions = 10f;
+    public static float collisions = 3f;
     
     // Start is called before the first frame update
     void Start()
@@ -31,13 +31,13 @@ public class TrainSpawner : MonoBehaviour
          
             randomIndex  = Random.Range(0,trainReference.Length);
 
-            randomNumber = 1;//Random.Range(1,4);
+            randomNumber = Random.Range(1,3);
             
             spawnedTrain = Instantiate(trainReference[randomIndex]);
             if (spawnedTrain.tag == "Train_L" || spawnedTrain.tag == "TNT_L"){
             spawnedTrain.GetComponent<follower_L>().speed = randomNumber;
             }
-            else if (spawnedTrain.tag == "Train_R" || spawnedTrain.tag == "TNT_R") {
+            else if (spawnedTrain.tag == "Train_R" || spawnedTrain.tag == "TNT_R" || spawnedTrain.tag == "Train_RR" || spawnedTrain.tag == "TNT_RR") {
                 spawnedTrain.GetComponent<follower_R>().speed = randomNumber;
             }
             
