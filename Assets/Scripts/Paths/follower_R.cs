@@ -31,7 +31,7 @@ public class follower_R : MonoBehaviour
 
         if(tag == "Train_R" || tag == "TNT_R")
         {
-        if (transform.position.y  > -1.27 && !isFlipped){
+        if (transform.position.y  > -1.75 && !isFlipped){
             isFlipped = true;
             FlipX();
         }

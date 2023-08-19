@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class DestroyOnTouch : MonoBehaviour
 {
+    private Animator anim;
     
-
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     private void Start()
     {
         // Store the initial position of the object
@@ -24,10 +28,22 @@ public class DestroyOnTouch : MonoBehaviour
 
             if (Vector3.Distance(touchPosition, gameObject.transform.position) < distanceThreshold)
             {
-                
-                Destroy(gameObject); // Destroy the object
+                animateExplosion();
+                StartCoroutine(Destroy());
             }
             
         }
+    }
+
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject); // Destroy the object
+    }
+    void animateExplosion()
+    {
+        Debug.Log("explosion animation");
+        anim.SetBool("explode", true);
     }
 }

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 82117b431ecc8fa42a635a3fb3dcb0e4
+  - enabled: 1
+    path: Assets/Scenes/instructions.unity
+    guid: 86885c644956c31449a61e9f192599f8
+  - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: fc84c693698fb3c479aea705c02de9ee
   - enabled: 1
@@ -17,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level4.unity
     guid: 85f8f947eb4a4194f83c5b56ff91f90b
+  - enabled: 1
+    path: Assets/Scenes/youLose-interval.unity
+    guid: 4408d1fedda2e6645864e62b104ceb03
+  - enabled: 1
+    path: Assets/Scenes/levelCleared.unity
+    guid: 9f1992e93b3af65469d0094bc7109069
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 159aaf10ce355d046a802d1faae3d862
   m_configObjects: {}
