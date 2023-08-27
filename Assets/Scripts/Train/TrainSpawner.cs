@@ -15,7 +15,7 @@ public class TrainSpawner : MonoBehaviour
 
     public static int score = 0;
 
-    public static float collisions = 3f;
+    public static float collisions = 5f;
     
     // Start is called before the first frame update
     void Start()

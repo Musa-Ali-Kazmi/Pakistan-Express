@@ -116,8 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614be55f411c82f4dac108ba9c31cf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSpeed: 0.1
-  maxTouchDistance: 1
+  newSpeed: 0.2
+  maxTouchDistance: 10
+  clock: {fileID: 7240092221840695322, guid: ad69b298a1ec11f41a5c2d8529fd820c, type: 3}
 --- !u!114 &-5230350853688504049
 MonoBehaviour:
   m_ObjectHideFlags: 0

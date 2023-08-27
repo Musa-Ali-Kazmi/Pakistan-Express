@@ -6,6 +6,7 @@ public class DestroyOnTouch : MonoBehaviour
 {
     private Animator anim;
     
+    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -24,7 +25,7 @@ public class DestroyOnTouch : MonoBehaviour
             Touch touch = Input.GetTouch(0); // Get the first touch
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
             touchPosition.z = 0f;
-            float distanceThreshold = 0.3f; // Adjust this value based on your needs
+            float distanceThreshold = 0.5f; // Adjust this value based on your needs
 
             if (Vector3.Distance(touchPosition, gameObject.transform.position) < distanceThreshold)
             {
@@ -43,7 +44,6 @@ public class DestroyOnTouch : MonoBehaviour
     }
     void animateExplosion()
     {
-        Debug.Log("explosion animation");
         anim.SetBool("explode", true);
     }
 }

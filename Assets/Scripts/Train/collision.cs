@@ -43,6 +43,10 @@ public class collision : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject); // Destroy the object
+        if(gameObject.tag == "Train_L" || gameObject.tag == "Train_R" || gameObject.tag == "Train_RR")
+        {
+            Destroy(gameObject.GetComponent<slowOnTouch>().spawnedClock);
+        }
     }
 
     void animateExplosion()

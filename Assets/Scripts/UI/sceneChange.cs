@@ -53,7 +53,7 @@ public class sceneChange : MonoBehaviour
         }
         else if (TrainSpawner.score == 10 )
             {
-                TrainSpawner.collisions = 3;
+                TrainSpawner.collisions = 5f;
                 TrainSpawner.score = 0;
                 if (SceneManager.GetActiveScene().name == "level1")
                 {
@@ -82,7 +82,7 @@ public class sceneChange : MonoBehaviour
             }
         else if(TrainSpawner.collisions == 0)
         {
-            TrainSpawner.collisions = 3;
+            TrainSpawner.collisions = 5;
             TrainSpawner.score = 0;
             if (SceneManager.GetActiveScene().name == "level1")
             {
